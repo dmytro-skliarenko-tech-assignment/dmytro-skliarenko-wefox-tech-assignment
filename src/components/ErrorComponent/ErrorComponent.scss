@@ -1,0 +1,13 @@
+@use "../../theme/colors" as c;
+
+.error-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.error-text {
+    font-size: x-large;
+    color: c.$primaryColor;
+    font-weight: bold;
+}

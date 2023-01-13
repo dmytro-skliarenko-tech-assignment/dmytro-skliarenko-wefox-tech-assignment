@@ -1,0 +1,103 @@
+@use "../../theme/colors" as c;
+
+.post-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.post {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 75%;
+    background-color: c.$postBg;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    gap: 1em;
+    animation: fadeIn 0.5s linear;
+
+    .text-field {
+        font-size: 3em;;
+    }
+    .textarea-field {
+        font-size: 1.5em;
+
+        &:read-only {
+            border-color: c.$neutralColor;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            transform: translateY(100vh);
+            opacity: 0.0;       
+        }
+        30% {
+            transform: translateY(0);
+            // opacity: 0.0;       
+        }
+        100% {
+            // transform: translateY(0);
+            opacity: 1; 
+        }       
+    }
+}
+.post-actions-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+.post-dates {
+    display: flex;
+    flex-direction: column;
+}
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.3em;
+}
+.post-date {
+    color: c.$neutralColor;
+}
+%post-action {
+    border: 2px solid;
+    outline: 0;
+    background-color: transparent;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: c.$postDisabledColor;
+        border-color: c.$postDisabledColor;
+    }
+}
+.post-save {
+    @extend %post-action;
+    background-color: c.$primaryColor;
+    border-color: c.$primaryColor;
+    color: c.$lightText;
+}
+.post-remove {
+    @extend %post-action;
+    background-color: transparent;
+    border-color: c.$primaryColor;
+    color: c.$postRemoveColor;
+}
+.post-edit {
+    @extend %post-action;
+    background-color: c.$primaryColor;
+    border-color: c.$primaryColor;
+    color: c.$lightText;
+}
+.post-cancel {
+    @extend %post-action;
+    border-color: c.$primaryColor;
+    color: c.$primaryColor;
+}

@@ -1,0 +1,31 @@
+@use "../../theme/colors" as c;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: c.$headerBg;
+    padding: 1.5em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.logo {
+    height: 1.5em;
+}
+.title {
+    margin: 0;
+}
+.create-post {
+    background-color: c.$primaryColor;
+    color: c.$lightText;
+    padding: 1em 2em;
+    border-radius: 1.6em;
+    border: 0;
+    font-weight: 600;
+
+    &:hover {
+        cursor: pointer;
+        background-color: c.$darkPrimaryColor;
+        transition: background-color 0.2s ease-in-out;
+    }
+}

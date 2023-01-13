@@ -1,0 +1,60 @@
+@use '../../theme/colors' as c;
+
+.post-item {
+    display: flex;
+    flex: 1 1 350px;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em; // todo
+    border: 1px solid c.$postBorder;
+    background-color: c.$postBg;
+    margin: 1.5em;
+    border-radius: 8px;
+    animation: fadeIn 0.5s linear;
+
+    &:hover {
+        transition: box-shadow 0.2s ease-in-out;
+        box-shadow: 1px 1px 5px 0.1px c.$primaryColor;
+        cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            transform: translateY(100vh);
+            opacity: 0.0;       
+        }
+        30% {
+            transform: translateY(0);
+            // opacity: 0.0;       
+        }
+        100% {
+            // transform: translateY(0);
+            opacity: 1; 
+        }       
+    }
+}
+.post-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em 1em;
+    flex-wrap: wrap;
+}
+.post-item-title {
+    margin: 0;
+}
+.info {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap-reverse;
+    
+}
+.content {
+    flex: 1 1 200px;
+}
+.image-wrapper {
+    flex: 1 1 200px;
+}
+.image {
+    max-width: 100%;
+}

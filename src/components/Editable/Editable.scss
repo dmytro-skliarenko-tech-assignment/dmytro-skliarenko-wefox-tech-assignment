@@ -1,0 +1,33 @@
+@use '../../theme/colors' as c;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.label {
+    font-size: 1em;
+    text-align: center;
+}
+.text-field, .textarea-field {
+    font-size: 1em;
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: 0;
+    box-shadow: 0;
+}
+.text-field {
+    &:not(&:read-only) {
+        border-bottom-color: c.$primaryColor;
+    }
+}
+.textarea-field {
+    border-color: transparent;
+    border-radius: 1em;
+    padding: 0.5em;
+    resize: none;
+
+    &:not(&:read-only) {
+        border-color: c.$primaryColor;
+    }
+}

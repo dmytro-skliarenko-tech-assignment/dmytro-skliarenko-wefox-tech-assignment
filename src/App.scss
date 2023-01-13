@@ -1,0 +1,12 @@
+@use "theme/colors" as c;
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(
+        0deg,
+        c.$gradientColorFrom 0%,
+        c.$gradientColorTo 100%
+    );
+}

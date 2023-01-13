@@ -1,0 +1,25 @@
+@use "../../theme/colors" as c;
+
+.loader-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.3em solid c.$primaryColor;
+    border-bottom-color: transparent;
+    border-radius: 100%;
+    animation: rotation 1s linear infinite;
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

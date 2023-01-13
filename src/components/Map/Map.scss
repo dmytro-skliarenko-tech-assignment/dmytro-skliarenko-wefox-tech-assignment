@@ -1,0 +1,38 @@
+@use "../../theme/colors" as c;
+
+.map-container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+.coordinates {
+    display: flex;
+    flex: 1 1 30%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+
+    .text-field {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+.map {
+    display: flex;
+    flex: 5 0 200px;
+    background-color: c.$mapBg;
+}
+.point {
+    fill: c.$gradientColorTo;
+}
+.geography {
+    stroke: c.$postBg;
+    fill: c.$primaryColor;
+    stroke-width: 0.2;
+    outline: none;
+
+    &:hover {
+        fill: c.$darkPrimaryColor;
+    }
+}

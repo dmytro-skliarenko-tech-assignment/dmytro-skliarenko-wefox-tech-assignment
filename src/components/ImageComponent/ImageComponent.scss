@@ -1,0 +1,22 @@
+@use "../../theme/colors" as c;
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .image {
+        width: 75%;
+    }
+    .image-input {
+        width: 75%;
+        font-size: 1em;
+        background-color: c.$postBg;
+        border: 1px solid transparent;
+        padding: 0.5em 0;
+        opacity: 0.5;
+        outline: 0;
+        box-shadow: 0;
+        text-align: center;
+    }
+}

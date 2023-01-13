@@ -1,0 +1,24 @@
+@use "../../theme/colors" as c;
+
+.post-list-container {
+    display: flex;
+    flex: 1;
+}
+.post-list {
+    flex: 1;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.post-list-empty {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 1em;
+    
+    h2 {
+        color: c.$lightText;    
+        text-align: center;
+    }
+}
